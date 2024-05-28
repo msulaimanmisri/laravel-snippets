@@ -24,6 +24,5 @@ class SomeRequest extends FormRequest {
             'body' => strtolower($this->body),
         ]);
     }
-
-
+  
 }
