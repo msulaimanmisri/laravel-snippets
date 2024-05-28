@@ -21,7 +21,7 @@ class SomeRequest extends FormRequest {
         $this->merge([
             'title' => strtolower($this->title),
             'slug' => Str::slug($this->title),
-            'body' => Str::of($this->body)->apa();,
+            'body' => Str::of($this->body)->apa(),
         ]);
     }
   
