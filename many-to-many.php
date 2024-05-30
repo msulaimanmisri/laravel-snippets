@@ -2,8 +2,8 @@
 declare(strict_types=1);
 
 /**
- * There's 2 way to make our Many-to-Many relationship easy to implement, easy to read
- * First, we use `constrain` method
+ * There are 2 ways to make our Many-to-Many relationship easy to implement, easy to read
+ * First, we use `constrained` method
  */
 Schema::create('post_tag', function(Blueprint $table) {
     $table->foreignId('post_id')
@@ -12,7 +12,7 @@ Schema::create('post_tag', function(Blueprint $table) {
 });
 
 /**
- * Second, we can use `foreignIdFor` method
+ * Second, we can use the `foreignIdFor` method
  */
 Schema::create('post_tag', function(Blueprint $table) {
     $table->foreignIdFor(Post::class, 'post_id')
