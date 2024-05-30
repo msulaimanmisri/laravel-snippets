@@ -7,12 +7,15 @@ declare(strict_types=1);
  */
 Schema::create('post_tag', function(Blueprint $table) {
     $table->foreignId('post_id')
-    ->constrained('posts');
+    ->constrained('posts')
+    ->cascadeOnDelete();
 });
 
 /**
  * Second, we can use `foreignIdFor` method
  */
 Schema::create('post_tag', function(Blueprint $table) {
-    $table->foreignIdFor(Post::class, 'post_id');
+    $table->foreignIdFor(Post::class, 'post_id')
+    ->constrained()
+    ->cascadeOnDelete();
 });
