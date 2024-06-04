@@ -37,4 +37,14 @@ class SomeRequest extends FormRequest {
     {
         $validator->validated();
     }
+
+  /**
+     * Change the attributes
+     */
+    public function attributes()
+    {
+        return [
+            'attribute_name' => 'AttributeName'
+        ];
+    }
 }
