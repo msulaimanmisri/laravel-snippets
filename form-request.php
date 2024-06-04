@@ -28,4 +28,13 @@ class SomeRequest extends FormRequest {
             'body' => ['required', 'string']
         ];
     }
+
+  
+  /**
+     * Prepare for Failed Request
+     */
+    protected function failedValidation(Validator $validator)
+    {
+        $validator->validated();
+    }
 }
