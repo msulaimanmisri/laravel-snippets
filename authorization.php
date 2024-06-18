@@ -29,9 +29,11 @@ class SomeController {
 
         /**
          * You also may need to use Laravel Gates @ Policy to make your code more robust
-         * 
          * @link https://laravel.com/docs/11.x/authorization#gates
          * @link https://laravel.com/docs/11.x/authorization#creating-policies
+         * 
+         * Untuk lagi robust, gunakan Middleware
+         * @link https://laravel.com/docs/11.x/middleware
          */
     }
 }
