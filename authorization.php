@@ -18,6 +18,14 @@ class SomeController {
         abort_if( $notTheUser, message: "This is not your Post!" );
 
         /**
+         * Laravel `can` and `cannot`
+         * @link https://laravel.com/docs/11.x/authorization#via-blade-templates
+         */
+        if ( Auth::login()->cannot('edit-some-class', $someClass) ) {
+            abort(403, 'Unauthorized');
+        }
+
+        /**
          * You also may need to use Laravel Gates @ Policy to make your code more robust
          * 
          * @link https://laravel.com/docs/11.x/authorization#gates
