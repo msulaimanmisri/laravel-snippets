@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+// Reminder : Authorization is used only for certain method / function. Not all need Authorization 
+
 class SomeController {
     public function edit(someClass $someClass) {
 
