@@ -32,7 +32,7 @@ class SomeController {
          * @link https://laravel.com/docs/11.x/authorization#gates
          * @link https://laravel.com/docs/11.x/authorization#creating-policies
          * 
-         * Untuk lagi robust, gunakan Middleware
+         * Untuk lagi robust, gunakan Middleware then combine dengan @can / @cannot
          * @link https://laravel.com/docs/11.x/middleware
          */
     }
