@@ -17,3 +17,12 @@ class someFactoryClass extends Factory {
         ];
     }
 }
+
+
+// DatabaseSeeder
+
+public function run() : void {
+    User::factory()
+    ->has(SomeFactoryClass::factory(3))
+    ->create(['name']);
+} 
