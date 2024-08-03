@@ -18,11 +18,18 @@ class someFactoryClass extends Factory {
     }
 }
 
-
-// DatabaseSeeder
-
+/**
+ * DatabaseSeeder
+ */
 public function run() : void {
     User::factory()
     ->has(SomeFactoryClass::factory(3))
     ->create(['name']);
 } 
+
+/**
+ * If you want to create Fake data, but don't want to insert it into the DB,
+ * you can use `make()`
+ */
+User::factory()->make();
+
