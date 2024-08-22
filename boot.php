@@ -6,6 +6,7 @@ class AppServiceProvider {
   public function boot() : void {
 
     User::shouldBeStrict();
+     Model::preventAccessingMissingAttributes();
 
   }
 
