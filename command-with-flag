@@ -1,0 +1,27 @@
+<?php
+
+/**
+* First, we need to create a new command class
+*/
+class ContohClass extends command 
+{
+  protected $signature = 'app:contoh-class {--flagName=defaultValue}';
+  protected $description = 'Contoh command untuk terima custom flag';
+  
+  public function handle()
+  {
+      $users = User::query()->where('membership', 'valid')->get();
+      $users->each(function ($user) {
+          $user->end_at = $user->end_at->addDays($this->option('flagName'));
+          $user->save();
+      });
+  } 
+  }
+  
+  /**
+  * Next, we need to register the command in the console kernel
+  * Then run it using the command php artisan app:contoh-class --flagName=5
+  */
+  php artisan app:contoh-class --flagName=5
+    
+}
